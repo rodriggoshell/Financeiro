@@ -4,6 +4,8 @@ import Sobre from './components/pages/Sobre';
 import Contatos from './components/pages/Contatos';
 import NovosProjetos from './components/pages/NovosProjetos';
 
+import Container from './components/layout/Container';
+
 function App() {
   return (
     <Router>
@@ -12,18 +14,20 @@ function App() {
         <li><Link to="/contatos">Contatos</Link></li>
       </ul>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/sobre">
-          <Sobre />
-        </Route>
-        <Route path="/contatos">
-          <Contatos />
-        </Route>
-        <Route path="/novosprojetos">
-          <NovosProjetos />
-        </Route>
+        <Container CustomClass="min-height">
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/sobre">
+           <Sobre />
+          </Route>
+          <Route path="/contatos">
+            <Contatos />
+          </Route>
+          <Route path="/novosprojetos">
+           <NovosProjetos />
+          </Route>
+        </Container>
       </Switch>
       <p>Footer Aqui</p>
     </Router>
