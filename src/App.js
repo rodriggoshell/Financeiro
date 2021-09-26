@@ -1,11 +1,15 @@
-import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router,Switch, Route, Link} from 'react-router-dom';
+import Home from './components/pages/Home';
+import Sobre from './components/pages/Sobre';
+import Contatos from './components/pages/Contatos';
+import NovosProjetos from './components/pages/NovosProjetos';
 
 function App() {
   return (
     <Router>
       <ul>
-        <li>Home</li>
-        <li>Contato</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/contatos">Contatos</Link></li>
       </ul>
       <Switch>
         <Route exact path="/">
@@ -17,7 +21,7 @@ function App() {
         <Route path="/contatos">
           <Contatos />
         </Route>
-        <Route path="newproject">
+        <Route path="/novosprojetos">
           <NovosProjetos />
         </Route>
       </Switch>
