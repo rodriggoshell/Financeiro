@@ -1,6 +1,16 @@
+import {FaInstagram,FaLinkedin} from 'react-icons/fa';
+
+import styles from './styles/Footer.module.css';
+
 function Footer() {
         return(
-            <p>Meu Pau</p> 
+            <footer className={styles.footer}>
+                <ul className={styles.social_list}>
+                    <li><FaInstagram /></li>
+                    <li><FaLinkedin /></li>
+                </ul>
+                <p className={styles.copy_right}><span>Costs</span> &copy; 2021</p>
+            </footer> 
         );
 }
 
